@@ -1,6 +1,6 @@
 
 // CSS
-require('./cookie.css');
+//require('./cookie.css');
 
 module.exports = {
     template: require('./cookie.html'),

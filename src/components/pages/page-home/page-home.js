@@ -5,9 +5,6 @@
 // INIT
 var Vue = require('vue');
 
-
-
-
 new Vue({
 
     el: '#vue',
@@ -42,9 +39,11 @@ require('../../../assets/css/style.css');
 require('../../common/cookie/cookie.css');
 require('../../common/header/header.css');
 require('../../common/hero/hero.css');
-require('../../common/footer/footer.css');
-require('./__include/question-form/question-form.css');
 require('./page-home.css');
+require('./__include/question-form/question-form.css');
+require('../../common/footer/footer.css');
+
+
 
 // SVG ------------------------------------------------
 require('../../common/svg/svg.js');

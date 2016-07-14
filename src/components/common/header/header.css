@@ -1,9 +1,9 @@
 
-header {
+.header {
     width: 100%;
     display: flex;
-    padding: 0 10px;
-    background-color: #ccc;
+    padding: 20px;
+    background-color: var(--color-header);
 
     .grid {
         display: flex;
@@ -13,6 +13,8 @@ header {
 
     .share-icon {
         fill: #fff;
+        width: 60px;
+        height: 60px;
     }
 
 

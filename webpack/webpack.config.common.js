@@ -8,7 +8,9 @@ var webpack = require('webpack'),
     reporter = require("postcss-reporter"),
     // postcssDiscardDuplicates = require('postcss-discard-duplicates'),
     // postcssMergeRules = require('postcss-merge-rules'),
-    cssnano = require('cssnano'),
+    cssvariables = require('postcss-css-variables'),
+    postcssNested = require('postcss-nested'),
+
 
 
     ExtractTextPlugin = require("extract-text-webpack-plugin"),
@@ -74,7 +76,15 @@ module.exports = {
         return [
             //reporter({ clearMessages: true }),
             atImport,
-            rg
+            rg,
+            cssvariables({
+                variables: {
+                     '--color-hero': '#41b883',
+                     '--color-white': '#fff',
+                     '--color-header': '#35495e'
+                }
+            }),
+            postcssNested
             // mqpacker,
             // autoprefixer,
             // postcssMergeRules,

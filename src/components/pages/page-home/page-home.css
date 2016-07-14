@@ -1,4 +1,11 @@
 
 .page-home {
-    color: #000;
+    
+    .grid-custom__col {
+        background-color: #ccc;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

@@ -56,7 +56,6 @@
     gridCustom: breakpoints({
         "tablet": 2,
         "smalldesktop": 3,
-        "desktop": 4,
-        "largedesktop": 6
+        "desktop": 4
     });
 }
