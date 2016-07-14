@@ -1,0 +1,58 @@
+// Import Globals
+@import "../../../scss/global";
+
+.hero {
+    width: 100%;
+    background-color: #c5e6e6;
+
+    @include mq($from: desktop) {
+        left: 0;
+        position: absolute;
+        top: 86px;
+    }
+
+    .hero-image {
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 1078px 382px;
+
+        @include mq($from: desktop) {
+            background-image: url(../../../img/header-bg-3x.png);
+            height: 540px;
+        }
+
+        @include mq($until: desktop) {
+            background-image: none!important;
+        }
+    }
+
+    .hero-content {
+        padding: 60px 0;
+        margin-left: 30px;
+        max-width: 600px;
+
+        h2 {
+            @include font(28, 32, $nspcc-bold);
+            color: $color-black;
+            margin-bottom: 20px;
+        }
+
+        img {
+            margin-bottom: 30px;
+        }
+
+        p {
+            @include font(16, 20, $nspcc-regular);
+        }
+
+        @include mq($from: desktop) {
+            margin-left: 1%;
+
+            h2 {
+                @include font(40, 44, $nspcc-bold);
+                color: $color-black;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

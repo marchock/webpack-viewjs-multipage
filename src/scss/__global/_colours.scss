@@ -1,0 +1,62 @@
+/**
+ * Colours
+ * Here we define the colour variables that are used throughout the other stylesheets
+ * For Colour names check out {@link http://chir.ag/projects/name-that-color/ Name That Colour}
+ * Theme colours are defined via CMS (index/theme-css.html)
+ * @group css.base.colours
+ */
+
+
+// ------------------------------------------------
+// Application Colours
+// ------------------------------------------------
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-mine-shaft
+ */
+$color-mine-shaft: #333;
+
+$color-green: #108633;
+
+$color-nspcc-green: #108633;
+
+$color-nspcc-grey: #56585a;
+
+$color-nspcc-grey-light: #ebebeb;
+
+$color-nspcc-blue: #035370;
+
+$color-nspcc-light-blue: #b1ddde;
+
+$color-nspcc-bg: #fafafa;
+
+$color-nspcc-midnight-blue: #045370;
+
+$color-text-link: #2f7ca3;
+
+$color-white: #fff;
+
+$color-black: #000;
+
+$color-pelorous: #449bc2;
+
+$color-salem: #12a53e;
+
+$color-regal-blue: #04516f;
+
+
+// ------------------------------------------------
+// Social Colours
+// ------------------------------------------------
+$color-facebook-hover: #b1ddde;
+$color-twitter-hover: #f5b9d2;
+$color-linkedin-hover: #fcc636;
+$color-google-hover: #d8ccf0;
+$color-youtube-hover: #f5b9d2;
+
+
+
+
+
+

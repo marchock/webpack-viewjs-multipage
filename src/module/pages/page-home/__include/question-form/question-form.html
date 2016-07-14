@@ -1,0 +1,68 @@
+<section class="grid section-content question-form">
+    <div class="content-padding">
+        <p>
+            {{ intro.copy }}
+        </p>
+        <div class="dotted-line top bottom">
+            <h4>
+                <img src="../../../../../img/warning-icon.png"> {{ intro.warning }}
+            </h4>
+        </div>
+        <div class="sub-header">
+            <h2>{{ assessment.title }}</h2>
+
+            <div class="mouse">
+                <img src="../../../../../img/mouse.png">
+                <span><span class="questions-counter">{{ count }}</span>/{{ noq }} questions</span>
+            </div>
+        </div>
+    </div>
+
+    <div v-for="question in assessment.questions" class="questions-block" v-bind:class="{ 'no-top-space': $index === 0}">
+        <img class="question-mouse" v-bind:class="{ 'first': $index === 0}" src="../../../../../img/mouse.png" v-if="question.showMouse">
+        <div class="content__questions">
+            <div class="question">
+                {{$index+1}}. {{question.question}}
+            </div>
+            <div class="options">
+                <div class="options-top">
+                    <span>{{ question.choiceLabels.positive }}</span>
+                    <span>{{ question.choiceLabels.negative }}</span>
+                    <span>{{ question.choiceLabels.neutral }}</span>
+                </div>
+                <div class="options-bottom">
+                    <span v-on:click="selectOption($index, 'yes')" tabindex="{{ $index + 1 }}">
+                        <img src="../../../../../img/circle-check.png">
+                        <img class="check" src="../../../../../img/check-x.png" v-if="question.choice === 'yes'">
+                    </span>
+                    <span v-on:click="selectOption($index, 'no')" tabindex="{{ $index + 2 }}">
+                        <img src="../../../../../img/circle-check.png">
+                        <img class="check" src="../../../../../img/check-x.png" v-if="question.choice === 'no'">
+                    </span>
+                    <span v-on:click="selectOption($index, 'maybe')" tabindex="{{ $index + 3 }}">
+                        <img src="../../../../../img/circle-check.png">
+                        <img class="check" src="../../../../../img/check-x.png" v-if="question.choice === 'maybe'">
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="content__answer" v-if="question.show">
+            <hr class="footer__hr crayon crayon-dark">
+            <div class="answer">
+                <div class="answer-copy">
+                    {{{ question.advice }}}
+                    <a href="{{question.more.url}}" target="_blank">{{ question.more.copy }}</a>
+                </div>
+
+                <div class="answer-img">
+                    <img srcset="{{question.imgSrc.x1}} 1x, {{question.imgSrc.x2}} 2x, {{question.imgSrc.x3}} 3x">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="view-results dotted-line top">
+        <a class="btn green" v-on:click="viewResults($event)" v-bind:class="{ 'disable': disableBtn }" href="/results">
+            {{ assessment.buttonLabel }}
+        </a>
+    </div>
+</section>

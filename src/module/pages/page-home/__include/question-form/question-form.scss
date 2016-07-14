@@ -1,0 +1,239 @@
+
+// Import Globals
+@import "../../../../../scss/global";
+
+.question-form {
+
+
+    .sub-header {
+        display: flex;
+        flex-direction: column;
+        margin: 46px 0 0;
+
+        @include mq($from: desktop) {
+            flex-direction: row;
+            margin: 46px 0 30px;
+        }
+    }
+
+    .mouse {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        > img {
+            height: 64px;
+        }
+
+        span {
+            @include font(18, 28, $nspcc-bold);
+            color: #999;
+
+            &.questions-counter {
+                color: $color-salem;
+            }
+        }
+
+        @include mq($from: desktop) {
+            width: 40%;
+
+            > img {
+                display: none;
+            }
+
+            span {
+                @include font(24, 28);
+            }
+        }
+    }
+
+    .view-results {
+        .btn {
+            &.disable {
+                opacity: 0.3;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+
+.questions-block {
+    margin-top: 30px;
+    position: relative;
+    &.no-top-space {
+        margin-top: 0;
+    }
+
+    .question-mouse {
+        animation: slide-up 0.3s ease-out;
+        display: none;
+        height: 64px;
+        position: absolute;
+        right: 16%;
+        top: -64px;
+
+        &.first {
+            right: 28%;
+        }
+
+        @include mq($from: desktop) {
+            display: block;
+        }
+    }
+}
+
+@keyframes slide-up {
+  0%   { transform: translateY(70px); }
+  100% { transform: translateY(0);  }
+}
+
+
+.content__questions,
+.content__answer {
+    background-color: $color-white;
+
+    @include mq($from: desktop) {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.content__questions {
+    padding: 20px 0 12px;
+    position: relative;
+    z-index: 1;
+
+    .question {
+        @include font(20, 28, $nspcc-semibold);
+        padding: 0 8% 30px;
+        text-align: center;
+    }
+
+    .options {
+        width: 100%;
+
+        > div {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+
+    .options-top {
+        padding-bottom: 4px;
+    }
+
+    .options-top,
+    .options-bottom {
+        > span {
+            flex: 1;
+            @include font(16, 16, $nspcc-semibold);
+            position: relative;
+            cursor: pointer;
+        }
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        pointer-events: none;
+
+        &.check {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            margin-left: -30px;
+        }
+    }
+
+    @include mq($from: desktop) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .options {
+            width: 25%;
+            margin-right: 4%;
+        }
+
+        .question {
+            padding: 0 40px;
+            text-align: left;
+            width: 70%;
+        }
+    }
+}
+
+.content__answer {
+
+    hr {
+        display: none;
+    }
+
+    .answer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .answer-img {
+        padding: 0 15% 30px;
+
+        > img {
+            width: 100%;
+            margin: 0 auto;
+
+            @include mq($from: tablet) {
+                width: 50%;
+            }
+            @include mq($from: desktop) {
+                width: 100%;
+            }
+        }
+    }
+
+    .answer-copy {
+        padding: 0 8% 30px;
+        @include font(16, 22, $nspcc-regular);
+
+        p {
+            @include font(16, 22, $nspcc-regular);
+            margin: 12px;
+        }
+
+        a {
+            @include font(16, 22, $nspcc-semibold);
+            color: $color-text-link;
+            display: block;
+            padding-top: 6px;
+        }
+    }
+
+    @include mq($from: desktop) {
+
+        hr {
+            display: block;
+            width: 90%;
+        }
+
+        .answer {
+            flex-direction: row;
+            padding: 30px 0
+        }
+
+        .answer-copy {
+            width: 60%;
+            order: 1;
+            padding: 0 4%;
+        }
+
+        .answer-img {
+            width: 40%;
+            padding: 0 4%;
+        }
+    }
+}

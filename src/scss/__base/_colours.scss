@@ -1,0 +1,130 @@
+/**
+ * Colours
+ * Here we define the colour variables that are used throughout the other stylesheets
+ * For Colour names check out {@link http://chir.ag/projects/name-that-color/ Name That Colour}
+ * Theme colours are defined via CMS (index/theme-css.html)
+ * @group css.base.colours
+ */
+
+
+// ------------------------------------------------
+// Application Colours
+// ------------------------------------------------
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-mine-shaft
+ */
+$color-mine-shaft: #333;
+
+$color-green: #108633;
+
+$color-nspcc-green: #108633;
+
+$color-nspcc-grey: #56585a;
+
+$color-nspcc-grey-light: #ebebeb;
+
+$color-nspcc-blue: #035370;
+
+$color-nspcc-light-blue: #b1ddde;
+
+$color-nspcc-bg: #fafafa;
+
+$color-nspcc-midnight-blue: #045370;
+
+$color-text-link: #2f7ca3;
+
+$color-white: #fff;
+
+$color-black: #000;
+
+$color-pelorous: #449bc2;
+
+$color-salem: #12a53e;
+
+$color-regal-blue: #04516f;
+
+
+// footer hover states
+$color-facebook-hover: #b1ddde;
+$color-twitter-hover: #f5b9d2;
+$color-linkedin-hover: #fcc636;
+$color-google-hover: #d8ccf0;
+$color-youtube-hover: #f5b9d2;
+
+
+// ------------------------------------------------
+// Social Colours
+// ------------------------------------------------
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-social-facebook
+ */
+$color-social-facebook : #3b5998;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-social-google
+ */
+$color-social-google: #dd4b39;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-social-instagram
+ */
+$color-social-instagram : #517fa4;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-social-linkedin
+ */
+$color-social-linkedin : #007bb6;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-social-twitter
+ */
+$color-social-twitter : #00aced;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-social-youtube
+ */
+$color-social-youtube : #b00;
+
+
+
+// ------------------------------------------------
+// State Indicator Colours
+// ------------------------------------------------
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-form-error
+ *
+ */
+$color-form-error: #ed1c24;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-form-warning
+ *
+ */
+$color-form-warning: #f0ad4e;
+
+/**
+ * @group css.base.colours
+ * @param {color} $color-form-success
+ *
+ */
+$color-form-success: #00a651;
+
+
+// ------------------------------------------------
+// Primary Font Colour
+// ------------------------------------------------
+body {
+    color: #000;
+}

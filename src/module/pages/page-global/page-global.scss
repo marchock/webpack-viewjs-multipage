@@ -1,0 +1,190 @@
+.page-global {
+    .section-content {
+        background-color: #f5f5f5;
+        padding-bottom: 30px;
+        position: relative;
+
+        @include mq($from: desktop) {
+            margin-top: 400px;
+        }
+    }
+
+    .content-padding {
+        padding: 62px 0 0;
+        margin: 0 auto;
+        width: 84%;
+
+        p {
+            @include font(16, 22, $nspcc-regular);
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            @include font(18, 28, $nspcc-bold);
+            margin-bottom: 20px;
+            color: $color-salem;
+            width: 200px;
+        }
+
+        @include mq($from: desktop) {
+            width: 80%;
+
+            h2 {
+                @include font(24, 28);
+                width: 60%;
+                margin-bottom: 0;
+            }
+        }
+
+        ul {
+            margin-left: 30px;
+
+            li {
+                @include font(16, 22, $nspcc-regular);
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    hr {
+        height: 1px;
+        margin: 0;
+        border: none;
+        outline: 0;
+        clear: both;
+    }
+
+    .hr--white {
+        background-color: white;
+    }
+
+    .hr--black {
+        background-color: black;
+    }
+
+
+    .dotted-line {
+        margin-top: 50px;
+        position: relative;
+        padding: 10px 0;
+        text-align: center;
+
+        &.top {
+            &::before {
+                content: '';
+                background-image: url('../../../img/dotted-line.png');
+                width: 100%;
+                height: 4px;
+                background-size: 163px 4px;
+                background-position: left top;
+                display: block;
+                position: absolute;
+                top: 0;
+            }
+        }
+
+        &.bottom {
+            &::after {
+                content: '';
+                background-image: url('../../../img/dotted-line.png');
+                width: 100%;
+                height: 4px;
+                background-size: 163px 4px;
+                background-position: left top;
+                display: block;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+
+        &.view-results {
+            width: 80%;
+            margin: 80px auto 0;
+        }
+    }
+
+
+    hr.crayon {
+        border: 0;
+        outline: 0;
+        position: relative;
+        z-index: 10;
+        height: 5px;
+        background-position: left, right;
+        background-size: 104px 5px, 104px 5px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        max-width: 1280px;
+        clear: both;
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            left: 104px;
+            right: 104px;
+            background-size: 131px 5px;
+            background-repeat: repeat-x;
+            height: 5px;
+            display: block !important; // When used with grid the line didnt have a width
+        }
+
+        &.crayon-dark {
+            background-image: url(../../../img/crayon_dark-left@2x.png), url(../../../img/crayon_dark-right@2x.png);
+
+            &::before {
+                background-image: url(../../../img/crayon_dark-mid@2x.png);
+            }
+        }
+
+        &.crayon-light {
+            background-image: url(../../../img/crayon_light-left@2x.png), url(../../../img/crayon_light-right@2x.png);
+            margin-bottom: 30px;
+
+            &::before {
+                background-image: url(../../../img/crayon_light-mid@2x.png);
+            }
+        }
+
+        @include mq($from: smalldesktop) {
+            &.crayon-light {
+                display: none;
+            }
+        }
+    }
+
+    .btn {
+        @include font(18, 22, $nspcc-bold);
+        align-items: center;
+        border-radius: 0;
+        color: $color-white;
+        display: flex;
+        height: 45px;
+        justify-content: center;
+        position: relative;
+        width: 276px;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &.green {
+            background-color: $color-salem;
+
+            .no-touchevents & {
+                &:hover {
+                    background-color: darken($color-salem, 3);
+                }
+            }
+        }
+
+        &.blue {
+            background-color: $color-regal-blue;
+
+            .no-touchevents & {
+                &:hover {
+                    background-color: darken($color-regal-blue, 3);
+                }
+            }
+        }
+    }
+}

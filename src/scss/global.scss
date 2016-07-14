@@ -1,0 +1,20 @@
+/**
+ * @group css.styles
+ *
+ * This is the core/primary stylesheet for the whole site, all other stylesheets are pulled in by this one.
+ * It is mobile first so we declare all our base styles first add more through media queries
+ *
+ */
+
+ // Import Mixins
+@import "__mixins/mq"; // Media Queries
+@import "__mixins/rg"; // Responsive Grids
+@import "__mixins/mixins"; // Useful Mixins
+
+// Import Global Styles
+@import "__global/variables";
+@import "__global/z-index";
+@import "__global/helpers";
+@import "__global/layout";
+@import "__global/colours";
+@import "__global/fonts";
