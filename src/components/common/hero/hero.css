@@ -1,0 +1,37 @@
+
+.hero {
+    width: 100%;
+    background-color: #c5e6e6;
+
+    .hero-image {
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 1078px 382px;
+        height: 540px;
+    }
+
+    .hero-content {
+        padding: 60px 0;
+        margin-left: 30px;
+        max-width: 600px;
+
+        h2 {
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        img {
+            margin-bottom: 30px;
+        }
+
+
+
+            margin-left: 1%;
+
+            h2 {
+                @include font(40, 44);
+                color: $color-black;
+                margin-bottom: 0;
+            }
+    }
+}

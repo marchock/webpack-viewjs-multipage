@@ -8,9 +8,9 @@ module.exports = merge(common, {
 
     module: {
         loaders: [
-            {// SASS -- note: sass-loader 3.2.0 not working
-                test: /\.scss$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css!postcss!sass?sourceMap") // extract css and create file
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract("style-loader", "css!postcss") // extract css and create file
             },
             {
                 test: /\.html$/,
@@ -22,12 +22,14 @@ module.exports = merge(common, {
 
     htmlhint: {
         configFile: '../.htmlhintrc'
-    },
-
-    postcss: function () {
-
-        return [
-            stylelint(stylelintConfig) // http://stylelint.io/user-guide/
-        ]
     }
+
+    // NOTE: style lint is breaking post css plugin postcss-rg
+
+    // postcss: function () {
+
+    //     return [
+    //         stylelint(stylelintConfig) // http://stylelint.io/user-guide/
+    //     ]
+    // }
 });
